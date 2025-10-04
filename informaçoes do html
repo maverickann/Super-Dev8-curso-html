@@ -1,0 +1,151 @@
+
+<!-- 
+    Imagem (img)
+    alt => descritivo do conteúdo da imagem
+    src => fonte -->
+<img alt="Informar o conteúdo da imagem" src="minha-imagem.png">
+
+<!-- 
+Texto (p)
+-->
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi adipisci voluptas est, quaerat accusamus voluptates! Dignissimos labore praesentium laborum illum deserunt aperiam aut, quos voluptatibus suscipit voluptatem quia ea laudantium.</p>
+
+<!-- 
+    Lista não ordenada (ul) => unordered list
+    Item da lista (li) -->
+<ul>
+    <li>Flamengo</li>
+    <li>Vasco</li>
+    <li>Corinthians</li>
+    <li>Palmeiras</li>
+</ul>
+<!-- 
+    Lista ordenada (ol) ordered list
+    Item da lista(li) -->
+<ol>
+    <li>
+        <span>Frutas</span>
+        <ul>
+            <li>Uva</li>
+            <li>Pera</li>
+            <li>Abacate</li>
+            <li>Tomate</li>
+        </ul>
+    </li>
+    <li>
+        <span>Verduras</span>
+        <ul>
+            <li>Brócolis</li>
+            <li>Cenoura</li>
+            <li>Cebola</li>
+        </ul>
+    </li>
+</ol>
+
+<!-- 
+    Tabela (table)
+    Linhas (tr) table row
+    Coluna (th[thead] td[tbody])
+    Cabeçalho da Tabela (thead)
+    Corpo da Tabela (tbody)
+    Rodapé da Tabela (tfoot) -->
+<table>
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Feijoada da Silvana</td>
+            <td>R$ 150,00</td>
+        </tr>
+        <tr>
+            <td>Strogonoff de Carne</td>
+            <td>R$ 35,00</td>
+        </tr>
+        <tr>
+            <td>Polenta mole com Frango</td>
+            <td>R$ 50,00</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Div serve para organizar o código -->
+<div>
+    <img src="deadpool.png" alt="Imagem do Deadpool do bem">
+</div>
+
+<!-- Ancora/Link (a) navegar entre páginas
+ href hyperlink reference -->
+<a href="frutas.html">Frutas</a>
+
+<!-- Button serve para realizar ações dentro da página
+    type="submit" para enviar o formulário para o back-end
+    type="clear" limpeza do formulário
+    type="button" serve para executar JS
+    -->
+<button type="submit">Enviar</button>
+
+<!-- Input serve para o usuário informar algo
+    type:
+        - radio
+        - checkbox
+        - email
+        - number
+        - text
+        - date
+        - datetime-local
+        - password
+        - ....
+    Atributos:
+        - name
+        - id
+        - minlength (text)
+        - maxlength (text)
+        - min (number)
+        - max (number)
+        - required
+        - readonly
+        - autofocus
+        
+-->
+
+<input type="" id="campo-fruta" name="fruta">
+
+<!-- Textarea serve para o usuário informar um texto (várias linhas) -->
+<textarea name="descricao" id="campo-descricao"></textarea>
+
+<!-- Rótulo (label) -->
+<label for="campo-fruta">Fruta</label>
+
+<!-- Escolha (select) -->
+<select id="campo-tamanho" name="tamanho">
+    <option value="pp">PP</option>
+    <option value="p">P</option>
+    <option value="m">M</option>
+    <option value="g">G</option>
+    <option value="g1">G1</option>
+    <option value="g2">G2</option>
+    <option value="g3">G3</option>
+    <option value="g4">G4</option>
+</select>
+
+<!--
+Back-end: Servidor + Banco de Dados (nuvem)
+Front-end: HTML, CSS, JS  (Chrome, Opera, Firefox, Brave, Edge)
+Formulário: agrupador de campos que envia os dados para o back-end
+-->
+<form method="get" action="https://franciscosensaulas.com/pessoas/cadastrar">
+    <label for="campo-fruta">Fruta</label>
+    <input type="text" name="fruta" id="campo-fruta" 
+        placeholder="Digite o nome da fruta" autofocus
+        required 
+        minlength="3"
+        maxlength="48">
+
+    <label for="campo-peso">Peso</label>
+    <input type="number" name="peso" id="campo-peso"
+        min="1.0" step="0.10" max="20.01" required>
+    <button type="submit">Salvar</button>
